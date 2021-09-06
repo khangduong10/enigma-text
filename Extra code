@@ -1,0 +1,256 @@
+Extra code: 
+/*
+      private void initializeReflectors(){
+         reflectorB.put('A', 'Y');
+         reflectorB.put('B', 'R');
+         reflectorB.put('C', 'U');
+         reflectorB.put('D', 'H');
+         reflectorB.put('E', 'Q');
+         reflectorB.put('F', 'S');
+         reflectorB.put('G', 'L');
+         reflectorB.put('H', 'D');
+         reflectorB.put('I', 'P');
+         reflectorB.put('J', 'X');
+         reflectorB.put('K', 'N');
+         reflectorB.put('L', 'G');
+         reflectorB.put('M', 'O');
+         reflectorB.put('N', 'K');
+         reflectorB.put('O', 'M');
+         reflectorB.put('P', 'I');
+         reflectorB.put('Q', 'E');
+         reflectorB.put('R', 'B');
+         reflectorB.put('S', 'F');
+         reflectorB.put('T', 'Z');
+         reflectorB.put('U', 'C');
+         reflectorB.put('V', 'W');
+         reflectorB.put('W', 'V');
+         reflectorB.put('X', 'J');
+         reflectorB.put('Y', 'A');
+         reflectorB.put('Z', 'T');
+         
+         reflectorC.put('A', 'F');
+         reflectorC.put('B', 'V');
+         reflectorC.put('C', 'P');
+         reflectorC.put('D', 'J');
+         reflectorC.put('E', 'I');
+         reflectorC.put('F', 'A');
+         reflectorC.put('G', 'O');
+         reflectorC.put('H', 'Y');
+         reflectorC.put('I', 'E');
+         reflectorC.put('J', 'D');
+         reflectorC.put('K', 'R');
+         reflectorC.put('L', 'Z');
+         reflectorC.put('M', 'X');
+         reflectorC.put('N', 'W');
+         reflectorC.put('O', 'G');
+         reflectorC.put('P', 'C');
+         reflectorC.put('Q', 'T');
+         reflectorC.put('R', 'K');
+         reflectorC.put('S', 'U');
+         reflectorC.put('T', 'Q');
+         reflectorC.put('U', 'S');
+         reflectorC.put('V', 'B');
+         reflectorC.put('W', 'N');
+         reflectorC.put('X', 'M');
+         reflectorC.put('Y', 'H');
+         reflectorC.put('Z', 'L');
+      }*/
+
+class Reflector{
+   private char [] settings;
+   final char[] alphabet = "abcdefghijklmnopqrstuvwxyz".toUpperCase().toCharArray();
+   public Reflector(char [] arr){
+   settings = arr;
+   }
+   public char reflect(char input){
+   return 'a';
+   }
+}
+
+
+
+
+charVal = Character.getNumericValue(Character.toUpperCase(letter))-10+orient;
+         int find = charVal-prevOrient;
+         if(find<26&& find>0){//if locate is in the alphabet
+            letter = alphabet[charVal-orient];//take that index from locate. That letter is now goes into the next rotor
+         }
+         else if ( charVal>=26){
+            letter = alphabet[ charVal-26-orient];//subtract 26 (wrap around the alphabet). This letter goes into the next rotor
+         }
+         else if ( charVal<0){
+            letter = alphabet[ charVal+26-orient];
+         } 
+         
+         int locate=0;//locate is what goes into the rotor 
+         for(int x=0;x<rotor.length;x++){//finds the index of letter in rotor
+            if(rotor[x]==letter){
+               locate = x;//-orient
+               break;
+            }
+         }
+         char next;
+         if(!lastRotor){
+            next = alphabet[locate];
+         }
+         else{
+            locate = locate+orient;
+            next = alphabet[locate];
+            
+            if(locate<26&&locate>0){//if locate is in the alphabet
+               next = alphabet[locate];//take that index from locate. That letter is now goes into the next rotor
+            }
+            else if (locate>=26){
+               next = alphabet[locate-26];//subtract 26 (wrap around the alphabet). This letter goes into the next rotor
+            }
+            else if (locate<0){
+               next = alphabet[locate+26];
+            } 
+         }
+         
+         return next;
+         
+         
+         
+         int lastOrient = locate+orient;
+            if(lastOrient<26&&lastOrient>=0)//if lastOrient is in the alphabet
+               next = alphabet[lastOrient];//take that index from lastOrient. That letter is now goes into the next rotor
+            
+            else if (lastOrient>=26)
+               next = alphabet[lastOrient-26];//subtract 26 (wrap around the alphabet). This letter goes into the next rotor
+            
+            else if (lastOrient<0)
+               next = alphabet[lastOrient+26];
+
+   if(orient<locate){
+               if(locate<26&&locate>=0)//if locate is in the alphabet
+                  next = alphabet[locate];//take that index from locate. That letter is now goes into the next rotor
+               
+               else if (locate>=26)
+                  next = alphabet[locate-26];//subtract 26 (wrap around the alphabet). This letter goes into the next rotor
+               
+               else if (locate<0)
+                  next = alphabet[locate+26];
+            }
+            else{
+               locate = locate-orient;
+               
+               if(locate<26&&locate>=0)//if locate is in the alphabet
+                  next = alphabet[locate];//take that index from locate. That letter is now goes into the next rotor
+               
+               else if (locate>=26)
+                  next = alphabet[locate-26];//subtract 26 (wrap around the alphabet). This letter goes into the next rotor
+               
+               else if (locate<0)
+                  next = alphabet[locate+26];
+            }
+            
+            
+            
+            
+            
+               private void initializeReflectors(){
+     
+         
+         reflectorC.put(0, 5);
+         reflectorC.put(1, 21);
+         reflectorC.put(2, 15);
+         reflectorC.put(3, 9);
+         reflectorC.put(4, 8);
+         reflectorC.put(5, 0);
+         reflectorC.put(6, 14);
+         reflectorC.put(7, 24);
+         reflectorC.put(8, 4);
+         reflectorC.put(9, 3);
+         reflectorC.put(10, 17);
+         reflectorC.put(11, 25);
+         reflectorC.put(12, 23);
+         reflectorC.put(13, 22);
+         reflectorC.put(14, 6);
+         reflectorC.put(15, 2);
+         reflectorC.put(16, 19);
+         reflectorC.put(17, 10);
+         reflectorC.put(18, 20);
+         reflectorC.put(19, 16);
+         reflectorC.put(20, 18);
+         reflectorC.put(21, 1);
+         reflectorC.put(22, 13);
+         reflectorC.put(23, 12);
+         reflectorC.put(24, 7);
+         reflectorC.put(25, 11);
+      }
+      
+      
+      
+      
+       //reflector 
+        /*
+         int charVal =Character.getNumericValue(Character.toUpperCase(output))-10-I.getOrientation();   
+         int reflectedVal = reflectorB.get(charVal)+I.getOrientation();      
+           /////////////////////////REMEMBER TO TRANSLATE THIS OVER TO REFLECTOR C AS WELL
+         if(reflect ==1){//use reflector b
+            if(charVal<26&&charVal>=0){//if output is in the alphabet
+               if(reflectedVal<26&&reflectedVal>=0)
+                  output = alphabet[reflectedVal];//take that index from output. That letter gets reflected  
+               else if (reflectedVal>=26)
+                  output = alphabet[reflectedVal-26];
+               else
+                  output = alphabet[reflectedVal+26];
+            }
+            
+            else if (charVal>=26){
+               reflectedVal = reflectorB.get(charVal-26)+I.getOrientation();
+               if(reflectedVal<26&&reflectedVal>=0)
+                  output = alphabet[reflectorB.get(charVal-26)+I.getOrientation()];//take that index from output. That letter gets reflected
+               else if (reflectedVal>=26)
+                  output = alphabet[reflectorB.get(charVal-26)+I.getOrientation()-26];//subtract 26 (wrap around the alphabet). This letter goes into the next rotor
+               else
+                  output = alphabet[reflectorB.get(charVal-26)+I.getOrientation()+26];
+            }              
+            
+            else if (charVal<0){
+               reflectedVal = reflectorB.get(charVal+26)+I.getOrientation();
+               if((reflectedVal)<26&&(reflectedVal)>=0)
+                  output = alphabet[reflectorB.get(charVal+26)+I.getOrientation()];//take that index from output. That letter gets reflected
+               else if (reflectedVal>=26)
+                  output = alphabet[reflectorB.get(charVal+26)+I.getOrientation()-26];//subtract 26 (wrap around the alphabet). This letter goes into the next rotor
+               else
+                  output = alphabet[reflectorB.get(charVal+26)+I.getOrientation()+26];
+            } 
+         }
+         
+         else {//use reflector c
+            if(charVal   <26&&charVal   >0){//if output is in the alphabet
+               output = alphabet[reflectorC.get(charVal)+I.getOrientation()];//take that index from output. That letter gets reflected
+            }
+            else if (charVal>=26){
+               output = alphabet[reflectorC.get(charVal-26)+I.getOrientation()];//subtract 26 (wrap around the alphabet). This letter goes into the next rotor
+            }
+            else if (charVal<0){
+               output = alphabet[reflectorC.get(charVal+26)+I.getOrientation()];
+            } 
+         }*/
+         
+         
+           //////////////ring settings affect the exit values only and don't rotate
+         /*if(ringSetting!=0){
+            int ringCharVal = Character.getNumericValue(Character.toUpperCase(next))-10-ringSetting;
+          
+            if(charVal<26&&charVal>=0){//if charVal is in the alphabet
+               next = alphabet[charVal];//take that index from charVal. 
+            }
+            else if (charVal>=26){
+               next = alphabet[charVal-26];//subtract 26 (wrap around the alphabet).
+            }
+            else if (charVal<0){
+               next = alphabet[charVal+26];
+            }      
+         }*/
+         
+         else if (locate<52&&locate>=26){
+            next = rotor[locate-26];//subtract 26 (wrap around the alphabet). This letter goes into the next rotor
+         }
+         else if (locate<0){
+            next = rotor[locate+26];
+         }    
+        
